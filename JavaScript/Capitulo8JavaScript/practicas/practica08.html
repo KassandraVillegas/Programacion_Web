@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 8.8</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <script>
+            var monto; // Monto actual 
+            var principal = 1000.00; // Monto principal
+
+            for(var tasa = 0.05; tasa <= 0.10; tasa += 0.01){
+                document.writeln("<table>"); // Comienza tabla
+                document.writeln(
+                    "<caption>C&aacute;lculo del inter&eacute;s compuesto de " + tasa +"</caption>");
+                document.writeln(
+                    "<thead><tr><th>A&ntilde;o</th>"); // Encabezado de la columna del año
+                document.writeln(
+                    "<th>Monto de dep&oacute;sito</th>");  // Encabezado de la columna del monto
+                document.writeln("</tr></thead><tbody>");
+
+                //Se manda a imprimir una fila de la tabla para cada año
+                for (var anio = 1; anio <= 10; ++anio){
+                    monto = principal * Math.pow(1.0 + tasa, anio);
+
+                    if (anio % 2 !== 0)
+                        document.writeln("<tr class='filaimpar'><td>" + anio +
+                            "</td><td>" + monto.toFixed(2) + "</td></tr>");
+                    else
+                        document.writeln("<tr><td>" + anio +
+                            "</td><td>" + monto.toFixed(2) + "</td></tr>");
+                }  // Fin del for
+
+                document.writeln("</tbody></table>");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

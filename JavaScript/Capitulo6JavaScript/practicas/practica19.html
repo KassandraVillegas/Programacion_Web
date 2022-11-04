@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 6.19</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <style type="text/css">
+            em{
+                color: blueviolet;
+            }
+        </style>
+        <script>
+            var val1, radio, diam, circ, area;
+
+            val1 = window.prompt("Escriba el radio del círculo");
+
+            radio = val1;
+
+            diam = radio * 2;
+
+            circ = 2 * (Math.PI * radio);
+
+            area = Math.PI * (radio * radio);
+
+            document.writeln(
+                "<p><strong>El di&aacute;metro es: </strong><em>" + diam +"</em>" +
+                "<br><strong>La circunferencia es: </strong><em>" + circ +"</em>" +
+                "<br><strong>El &aacute;rea es: </strong><em>" + area +"</em>" +
+                "</p>"
+            );
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

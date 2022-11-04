@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 8.11</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <script>
+            document.writeln("<button><a href='/menu.html'>regresar al menu</a></button><br>");
+            var producto, prod, cantidad, cant, valor, total = 0;
+
+            for (var i  = 1; i <= 7; ++i){
+                window.alert("Día " + i);
+                
+                do{
+                    producto = window.prompt("Escriba el número del producto (6 para siguiente día)");
+                    prod = parseInt(producto);
+                    switch (prod){
+                        case 1:
+                            cantidad = window.prompt("Escriba la cantidad vendida");
+                            cant = parseInt(cantidad);
+
+                            valor = 2.98;
+
+                            total += (cant * valor);
+                            break;
+                        case 2:
+                            cantidad = window.prompt("Escriba la cantidad vendida");
+                            cant = parseInt(cantidad);
+
+                            valor = 4.50;
+
+                            total += (cant * valor);
+                            break;
+                        case 3:
+                            cantidad = window.prompt("Escriba la cantidad vendida");
+                            cant = parseInt(cantidad);
+
+                            valor = 9.98;
+
+                            total += (cant * valor);
+                            break;
+                        case 4:
+                            cantidad = window.prompt("Escriba la cantidad vendida");
+                            cant = parseInt(cantidad);
+
+                            valor = 4.49;
+
+                            total += (cant * valor);
+                            break;
+                        case 5:
+                            cantidad = window.prompt("Escriba la cantidad vendida");
+                            cant = parseInt(cantidad);
+
+                            valor = 6.87;
+
+                            total += (cant * valor);
+                            break;
+                        case 6:
+                            break;
+                        default:
+                            window.alert("Porfavor ingrese un producto valido");
+                    }
+                } while (prod <= 5);
+            }
+
+            document.writeln("<strong>El total de ventas de la semana es de: </strong><em>" + total + "</em>");
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

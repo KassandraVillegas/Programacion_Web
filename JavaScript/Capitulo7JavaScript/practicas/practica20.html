@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 7.20</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <script>
+            var num, numero;
+
+            num = window.prompt("Escriba un número entero de 5 dígitos");
+            numero = parseInt(num);
+
+            var uni, dec, cen, mi, dm, val = 1;
+
+            while(val != 0){
+                uni = (numero % 100000 - numero % 10000) / 10000;
+                dec = (numero % 10000 - numero % 1000) / 1000;
+                cen = (numero % 1000 - numero % 100) / 100;
+                mi = (numero % 100 - numero % 10) / 10;
+                dm = numero % 10;
+
+                if(numero > 99999 | numero < 10000){
+                    alert("El número no es un entero de 5 dígitos");
+                    num = window.prompt("Escriba un núemero entero de 5 dígitos");
+                    numero = parseInt(num);
+                    val = 1;
+                }else{
+                    if(uni == dm && dec == mi){
+                        document.writeln("Sí es un palíndromo.");
+                    }else{
+                        document.writeln("No es palíndromo.");
+                    }
+                    val = 0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

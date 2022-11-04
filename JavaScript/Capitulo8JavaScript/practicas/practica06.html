@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 8.6</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <script>
+            var n, num, menor,m;
+
+            num = window.prompt("Escriba la cantidad de números que introducira");
+            n = parseInt(num);
+            menor = 9999999;  // Valor predefinido para que cualquier numero introducido sea menor.
+            for (var i = 1; i <= n; i++){
+                num = window.prompt("Escriba el " + i + " valor:");
+                m = parseInt(num);
+                if (m < 0){
+                    alert("¡El número es un número negativo!");
+                    break;
+                }else{
+                    if(m <= menor){
+                        menor = m;
+                    }else{
+                        menor = menor;
+                    }
+                }
+            }
+            document.writeln("El número menor es: " + menor);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

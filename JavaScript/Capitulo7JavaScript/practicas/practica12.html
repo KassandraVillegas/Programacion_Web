@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 7.12</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <script>
+            var numcuenta, saldo, articulos, creditos, limite;
+            var cuenta, saldoini, tarticulos, tcreditos, limitec, numsaldo;
+
+            numcuenta = window.prompt("Ingrese su número de cuenta");
+            cuenta = parseInt(numcuenta);
+            saldo = window.prompt("Ingrese su saldo al inicio de mes");
+            saldoini = parseInt(saldo);
+            articulos = window.prompt("Ingrese el total de créditos cargados del mes");
+            tarticulos = parseInt(articulos);
+            creditos = window.prompt("Ingrese el total de créditos aplicados");
+            tcreditos = parseInt(creditos);
+            limite = window.prompt("Ingrese el limite de crédito permitido");
+            limitec = parseInt(limite);
+
+            numsaldo = (saldoini + tarticulos - tcreditos);
+
+            if(numsaldo <= limitec)
+                document.writeln("<p>Nuevo Balance:<br>crédito: " + numsaldo + "</p>");
+            else
+                document.writeln("Se excedió el límite de su crédito");
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica 7.13</title>
+        <button><a href="/menu.html">Regresar al menú</a></button>
+        <script>
+            var art, articulo, val, costo, total = 0, comision, cont = 0;
+
+            art = window.prompt("Escriba la cantidad de artículos vendidos");
+            articulo = parseInt(art);
+
+            while(cont != articulo){
+                val = window.prompt("Escriba el precio del artículo " + (cont+1) + ":");
+                costo = parseFloat(val);
+                total += costo;
+                cont++;
+            }
+            comision = 200 + (total * .09);
+            document.writeln("Su pago es de: $" + comision);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
